@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    ports:
+      - "5433:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: postgres  # Explicitly set username
+      POSTGRES_PASSWORD: emmanuel123  # Your password
+      POSTGRES_DB: task_db  # Create a specific database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistent storage
+
+volumes:
+  postgres_data:
