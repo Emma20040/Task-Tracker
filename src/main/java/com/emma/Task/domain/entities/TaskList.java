@@ -24,7 +24,7 @@ public class TaskList {
 
 
 //    setting up the relationship between Task and TaskList
-    @OneToMany(mappedBy = "task_list", cascade = {
+    @OneToMany(mappedBy = "taskList", cascade = {
             CascadeType.REMOVE, CascadeType.PERSIST
     })
     private List<Task> task;
