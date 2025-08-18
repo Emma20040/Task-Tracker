@@ -56,7 +56,7 @@ public class TaskListMapperImpl implements TaskListMapper {
 //    calculating progress
     private Double calculateTaskListProgress(List<Task> tasks){
         if(null ==tasks){
-            return null;
+            return 0.0;
         }
         long closedTaskCount=  tasks.stream().filter(task ->
                 TaskStatus.CLOSED == task.getStatus() ).count();
